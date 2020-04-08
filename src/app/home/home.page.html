@@ -1,20 +1,43 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Welcome Home!
     </ion-title>
+    <ion-buttons slot="start">
+        
+      <ion-menu-button color="tertiary" menuId="first"></ion-menu-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Welcome Home!</ion-title>
+
+      
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-content [fullscreen]="true">
+    <ion-menu side="start" menuId="first" contentId="main">
+      <ion-header>
+        <ion-toolbar color="primary">
+          <ion-title>Start Menu</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-list>
+          <ion-item><ion-icon name="home-outline" class="icon-right"></ion-icon>     Home</ion-item>
+          <ion-item><ion-icon name="people-outline" class="icon-right"></ion-icon> Friends</ion-item>
+          <ion-item><ion-icon name="key-outline" class="icon-right"></ion-icon> My Account</ion-item>
+          <ion-item><ion-icon name="key-outline" class="icon-right"></ion-icon> Log Out</ion-item>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+    
+  
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+
+    <ion-router-outlet id="main"></ion-router-outlet>
 </ion-content>

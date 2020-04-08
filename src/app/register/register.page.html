@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-title>Register</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <div class="">
+    <ion-item>
+      <ion-input type="text" placeholder="Your Name" [(ngModel)]="your_name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label style="color: #999;">Gender</ion-label>
+      <ion-label></ion-label>
+      <ion-select interface="popover" [(ngModel)]="gender">
+        <ion-select-option value="f">Female</ion-select-option>
+        <ion-select-option value="m">Male</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-input type="text" placeholder="E-mail Address" [(ngModel)]="email_address"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="password" placeholder="Password" [(ngModel)]="password"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="password" placeholder="Confirm Password" [(ngModel)]="confirm_password"></ion-input>
+    </ion-item>
+  </div>
+      <ion-button button expand="full" class="ion-padding" color="succcess" (click)="tryRegister()">Register</ion-button>
+  </ion-list>
+</ion-content>
